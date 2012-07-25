@@ -10,6 +10,8 @@
  * 
  * Based on the Zend Ow.ly URL helper by Maxime <maxime.parmentier@invokemedia.com>
  * 
+ * Support can be logged at http://redmine.invokemedia.com/projects/owly-api-client-php
+ * 
  * @author    Shih Oon Liong <shihoon.liong@invokemedia.com>
  * @created		24/07/2012
  * @copyright	Invoke Media

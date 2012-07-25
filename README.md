@@ -1,21 +1,28 @@
-Owly PHP API Class
-==================
+Owly API PHP Client Library
+===========================
+
 A PHP Class to interface with the Owly API to generate short trackable URLs
+
+Report all bugs/features at
+http://redmine.invokemedia.com/projects/owly-api-client-php
 
 What is Ow.ly?
 ==============
+
 A URL Shortener service which is heavily used by Hootsuite.
 
 Generating an API Key
 =====================
+
 Ow.ly is completely separated from HootSuite. The only thing that an API key can be associated with is a Twitter account.
 
 To generate an api key
-Log in to ow.ly using a twitter account \
+Log in to ow.ly using a twitter account
 then go to:  http://ow.ly/user/{your_twitter_username}?t=apikey - this will auto-generate an API key that will be tied to the Twitter account.
 
 Requirements
 ============
+
 PHP 5 (5.3 ideally)
 PHP Curl extension
 
