@@ -8,7 +8,7 @@
  * 
  * Does NOT yet support POST methods
  * 
- * Based on the Zend Ow.ly URL helper created by Maxime <maxime.parmentier@invokemedia.com>
+ * Based on the Zend Ow.ly URL helper by Maxime <maxime.parmentier@invokemedia.com>
  * 
  * @author    Shih Oon Liong <shihoon.liong@invokemedia.com>
  * @created		24/07/2012
@@ -49,6 +49,10 @@ class OwlyApi {
 		 * @return void
 		 */
 		public function __construct($options) {
+				if ( ! array_key_exists('key', $options) || empty($options['key']) ) {
+						throw new Exception('No API Key found');
+				}
+				
 				$this->apiKey = $options['key'];
 				
 				if ( array_key_exists('version', $options) ) {
@@ -78,7 +82,7 @@ class OwlyApi {
 		 * @param type $apiCall
 		 * @return type 
 		 */
-		public function getApiMethod($apiCall) {
+		private function getApiMethod($apiCall) {
 				$url = $this->protocol . self::BASE_API_URL . $this->version . '/';
 				if ( ! empty($apiCall) ) {
 						$url .= $this->apiCalls[$apiCall];
@@ -149,10 +153,11 @@ class OwlyApi {
 								return $data->results;
 						} else {
 								$errorMsg = 'Response error - Owly API Error encountered: ' 
-													. '[' . $metadata['http_code'] . ']';
+													. '[' . $metadata['http_code'] . '] '
+												  . '(Request: ' . $apiUrl . ') ';
 								if ( ! empty($response) ) {
 										$data = json_decode($response);
-										$errorMsg .= ' ' . $data->error;
+										$errorMsg .= $data->error;
 								}
 								
 								throw new Exception($errorMsg);
