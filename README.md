@@ -32,7 +32,7 @@ Usage
 Currently the API methods that have been implemented in this class
 - url/shorten
 
-<code>
+<pre>
 $longUrl = 'http://www.github.com';
 $owly = OwlyApi::factory(array('key' => 'Your Owly API Key'));
 try {
@@ -40,7 +40,7 @@ try {
 } catch(Exception $e) {
 		// Catch any API errors here
 }
-</code>
+</pre>
  
 The class heavily utilizes exceptions to throw any errors it gets from the API. 
 It is highly recommended to do a try-catch wrapper when using any of the methods.
