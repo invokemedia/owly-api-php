@@ -3,8 +3,21 @@ Owly API PHP Client Library - owly-api-php
 
 A PHP Class to interface with the Owly API to generate short trackable URLs
 
+Currently only supports the follow methods
++ shorten - Shorten a URL
+ 
+Does NOT yet support POST methods
+ 
+Based on the Zend Ow.ly URL helper by Maxime Parmentier <maxime.parmentier@invokemedia.com>
+
 Report all bugs/features at
-http://redmine.invokemedia.com/projects/owly-api-client-php
+https://github.com/invokemedia/owly-api-php
+
+Version		1.0.0
+Author		Shih Oon Liong <shihoon.liong@invokemedia.com>
+Created		24/07/2012
+Copyright	Invoke Media / Biplane
+License		http://opensource.org/licenses/mit-license.php MIT 
 
 What is Ow.ly?
 ==============
