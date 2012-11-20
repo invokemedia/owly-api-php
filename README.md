@@ -36,9 +36,9 @@ Currently the API methods that have been implemented in this class
 $longUrl = 'http://www.github.com';
 $owly = OwlyApi::factory(array('key' => 'Your Owly API Key'));
 try {
-		$url = $owly->shorten($longUrl);
+	$url = $owly->shorten($longUrl);
 } catch(Exception $e) {
-		// Catch any API errors here
+	// Catch any API errors here
 }
 </pre>
  
