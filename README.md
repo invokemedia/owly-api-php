@@ -29,6 +29,8 @@ Generating an API Key
 
 Ow.ly is completely separated from HootSuite. The only thing that an API key can be associated with is a Twitter account.
 
+In order to use this library you need to contact their team to get API Key: https://developer.hootsuite.com/docs/owly-api-reference
+
 To generate an api key
 Log in to ow.ly using a twitter account
 then go to:  http://ow.ly/user/{your_twitter_username}?t=apikey - this will auto-generate an API key that will be tied to the Twitter account.
